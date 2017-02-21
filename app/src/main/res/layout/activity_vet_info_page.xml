@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient8"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/lastVisit"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="Last Visit Date:"
+            android:textSize="28sp" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:text="Day"
+                android:textColor="#000"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="85dp"
+                android:textColor="#000"
+                android:text="Month"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="85dp"
+                android:textColor="#000"
+                android:text="Year"
+                android:textSize="16sp"/>
+            </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="0dp"
+            android:weightSum="1">
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/daySpinner"
+                app:ms_dropdown_max_height="140dp"
+                android:entries="@array/day_options"
+                app:ms_background_color="#80FFFFFF"
+                android:layout_below="@+id/day"
+                android:layout_alignLeft="@+id/day"
+                android:layout_alignRight="@+id/day"
+                android:spinnerMode="dropdown"
+                android:layout_weight="0.33"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp" />
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                app:ms_dropdown_max_height="140dp"
+                android:id="@+id/monthSpinner"
+                android:entries="@array/month_options"
+                android:layout_below="@+id/month"
+                app:ms_background_color="#80FFFFFF"
+                android:textSize="14dp"
+                android:layout_marginLeft="25dp"
+                android:layout_alignLeft="@+id/month"
+                android:layout_alignRight="@+id/month"
+                android:spinnerMode="dropdown"
+                android:layout_weight="0.33" />
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                app:ms_dropdown_max_height="140dp"
+                app:ms_text_color="#333333"
+                app:ms_background_color="#80FFFFFF"
+                android:id="@+id/yearSpinner"
+                android:layout_below="@+id/year"
+                android:textSize="14dp"
+                android:layout_marginLeft="25dp"
+                android:layout_alignLeft="@+id/year"
+                android:layout_alignRight="@+id/year"
+                android:spinnerMode="dropdown"
+                android:layout_weight="0.33" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/load_image"
+        android:text="Upload Image"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:onClick="loadImage"
+        android:shadowRadius="5"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <Button
+            android:layout_margin="10dp"
+            android:id="@+id/save_Image"
+            android:text="Save Image"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:onClick="saveImage"
+            android:shadowRadius="5"
+            android:gravity="center"
+            />
+
+        <Button
+            android:layout_margin="10dp"
+            android:id="@+id/see_history"
+            android:text="See History"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:onClick="seeHistory"
+            android:shadowRadius="5"
+            android:gravity="center"
+            />
+
+        </LinearLayout>
+
+    <ImageView
+        android:id="@+id/uploaded_image"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/gradient8"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/lastVisit"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="Set Reminder Date:"
+            android:textSize="28sp" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                >
+                <TextView
+                    android:id="@+id/day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Day"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="Month"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:id="@+id/year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="Year"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="0dp"
+            android:weightSum="1">
+            <Spinner
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/daySpinner"
+                android:entries="@array/day_options"
+                android:layout_below="@+id/day"
+                android:layout_alignLeft="@+id/day"
+                android:layout_alignRight="@+id/day"
+                android:spinnerMode="dropdown"
+                android:layout_weight="0.30"
+                android:layout_marginLeft="10dp" />
+            <Spinner
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/monthSpinner"
+                android:entries="@array/month_options"
+                android:layout_below="@+id/month"
+                android:layout_marginLeft="10dp"
+                android:layout_alignLeft="@+id/month"
+                android:layout_alignRight="@+id/month"
+                android:spinnerMode="dropdown"
+                android:layout_weight="0.31" />
+            <Spinner
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/yearSpinner"
+                android:layout_below="@+id/year"
+                android:layout_marginLeft="10dp"
+                android:layout_alignLeft="@+id/year"
+                android:layout_alignRight="@+id/year"
+                android:spinnerMode="dropdown"
+                android:layout_weight="0.26" />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/cat_notes_today"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="top|left"
+            android:inputType="textNoSuggestions"
+            android:layout_marginRight="10dp"
+            android:layout_height="250dp"
+            android:background="@drawable/frame"
+            android:hint="Write your reminder!"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/SaveReminder"
+        android:text="Save"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:onClick="onSaveButtonClick"
+        android:shadowRadius="5"
+        />
+</LinearLayout>

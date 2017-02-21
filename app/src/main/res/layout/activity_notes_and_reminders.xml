@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradient8">
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        android:layout_margin="7dp">
+        <TextView
+            android:id="@+id/notes_reminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Enter Notes and Reminders Here:"
+            android:gravity="center_horizontal"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+        <EditText
+            android:id="@+id/cat_notes"
+            android:layout_width="match_parent"
+            android:gravity="top|left"
+            android:hint="Write your notes here!"
+            android:inputType="textNoSuggestions"
+            android:layout_margin="10dp"
+            android:layout_height="300dp"
+            android:background="@drawable/frame"/>
+            <Button
+                android:text="Save"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:onClick="saveNotes"
+                android:shadowRadius="5"
+                />
+            </LinearLayout>
+
+
+
+</LinearLayout>

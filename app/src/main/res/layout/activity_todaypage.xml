@@ -1,0 +1,424 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient8"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/TakePicture"
+                android:text="Take a Picture"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:onClick="takePicture"
+                android:shadowRadius="5"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:id="@+id/Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:orientation="vertical"
+                android:background="@drawable/frame"
+                android:paddingBottom="7dp">
+
+                <TextView
+                    android:id="@+id/Food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="Food"
+                    android:textColor="#000000"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_food3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/check_box"
+                        android:onClick="onCheckboxClicked" />
+
+                    <EditText
+                        android:id="@+id/fillInFood3"
+                        android:layout_width="match_parent"
+                        android:inputType="textNoSuggestions"
+                        android:layout_height="36dp"
+                        android:layout_toRightOf="@+id/checkbox_food3"
+                        android:layout_weight="1"
+                        android:hint="Enter Time"
+                        android:scrollbars="horizontal"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_food2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/check_box"
+                        android:onClick="onCheckboxClicked" />
+
+                    <EditText
+                        android:id="@+id/fillInFood2"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:inputType="textNoSuggestions"
+                        android:layout_toRightOf="@+id/checkbox_food2"
+                        android:layout_weight="1"
+                        android:scrollbars="horizontal"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_food1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/check_box"
+                        android:onClick="onCheckboxClicked" />
+
+                    <EditText
+                        android:id="@+id/fillInFood1"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:inputType="textNoSuggestions"
+                        android:layout_toRightOf="@+id/checkbox_food1"
+                        android:layout_weight="1"
+                        android:scrollbars="horizontal"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:orientation="vertical"
+                android:background="@drawable/frame"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/Medication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="Medication"
+                    android:textColor="#000000"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_medication3"
+                        android:button="@drawable/check_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onCheckboxClicked" />
+
+                    <EditText
+                        android:id="@+id/fillInMedication3"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:inputType="textNoSuggestions"
+                        android:layout_toRightOf="@+id/checkbox_medication3"
+                        android:layout_weight="1"
+                        android:hint="Enter Time"
+                        android:scrollbars="horizontal"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_medication2"
+                        android:layout_width="wrap_content"
+                        android:button="@drawable/check_box"
+                        android:layout_height="wrap_content"
+                        android:onClick="onCheckboxClicked" />
+
+                    <EditText
+                        android:id="@+id/fillInMedication2"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:inputType="textNoSuggestions"
+                        android:layout_toRightOf="@+id/checkbox_medication2"
+                        android:layout_weight="1"
+                        android:scrollbars="horizontal"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_medication1"
+                        android:layout_width="wrap_content"
+                        android:button="@drawable/check_box"
+                        android:layout_height="wrap_content"
+                        android:onClick="onCheckboxClicked" />
+
+                    <EditText
+                        android:id="@+id/fillInMedication1"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@+id/checkbox_medication1"
+                        android:layout_weight="1"
+                        android:inputType="textNoSuggestions"
+                        android:scrollbars="horizontal"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="169.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/frame"
+                    android:layout_marginRight="7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Toiletry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="Toiletry"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkbox_toilet1"
+                            android:layout_width="wrap_content"
+                            android:button="@drawable/check_box"
+                            android:layout_height="wrap_content"
+                            android:onClick="onCheckboxClicked"
+                            android:text="#1" />
+                    </LinearLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="horizontal">
+
+
+                        <CheckBox
+                            android:id="@+id/checkbox_toilet2"
+                            android:layout_width="wrap_content"
+                            android:button="@drawable/check_box"
+                            android:layout_height="wrap_content"
+                            android:onClick="onCheckboxClicked"
+                            android:text="#2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="5dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:paddingLeft="0dp"-->
+                    <!--android:paddingRight="0dp">-->
+                <!--</LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="169.5dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/frame">
+
+                    <TextView
+                        android:id="@+id/Input_Cat_Weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="7dp"
+                        android:gravity="center"
+                        android:text="Enter Cat Weight:"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/enter_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:textSize="12dp"
+                        android:inputType="textNoSuggestions"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="10dp"
+                        android:hint="Enter Weight"
+                        android:textStyle="bold"
+                        android:typeface="serif"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:orientation="vertical"
+                android:background="@drawable/frame"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/reminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:text="Reminder:"
+                    android:textColor="#000000"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/enter_reminder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/checkbox_medication1"
+                        android:layout_weight="1"
+                        android:inputType="textNoSuggestions"
+                        android:hint="Enter Reminder"
+                        android:scrollbars="horizontal"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/Save"
+                    android:text="Save"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonshape"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:onClick="onSaveButtonClick"
+                    android:shadowRadius="5"
+                    android:layout_margin="10dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </TableLayout>
+</ScrollView>

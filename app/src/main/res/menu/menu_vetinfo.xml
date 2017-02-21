@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cis350.upenn.edu.cathealthapp.Core.VetInfoPage">
+    <item
+        android:id="@+id/action_menuV"
+        android:orderInCategory="100"
+        android:title="Menu"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_lastPageV"
+        android:orderInCategory="100"
+        android:title="Last Page"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_quitV"
+        android:orderInCategory="100"
+        android:title="Quit"
+        app:showAsAction="never"/>
+</menu>

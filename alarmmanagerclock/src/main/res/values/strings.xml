@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Remind</string>
+    <string name="pickerview_cancel">Cancel</string>
+    <string name="pickerview_submit">OK</string>
+    <string name="pickerview_year">Yr</string>
+    <string name="pickerview_month">Mon</string>
+    <string name="pickerview_day">Day</string>
+    <string name="pickerview_hours">Hr</string>
+    <string name="pickerview_minutes">Min</string>
+    <string name="pickerview_seconds">Sec</string>
+</resources>

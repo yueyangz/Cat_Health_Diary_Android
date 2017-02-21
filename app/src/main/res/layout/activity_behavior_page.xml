@@ -1,0 +1,247 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient8">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/Active"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="158dp"
+                android:textColor="#000000"
+                android:text="Active:"
+                android:textSize="28sp" />
+
+            <!--<Spinner-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:id="@+id/behaviorSpinner"-->
+                <!--android:entries="@array/behavior_options"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_below="@+id/Active"-->
+                <!--android:layout_alignLeft="@+id/Active"-->
+                <!--android:layout_alignRight="@+id/Active"-->
+                <!--android:spinnerMode="dropdown"/>-->
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:ms_dropdown_max_height="120dp"
+                android:layout_marginLeft="1dp"
+                app:ms_background_color="#80FFFFFF"
+                android:layout_below="@+id/Active"
+                android:id="@+id/behaviorSpinner"
+                android:textSize="14dp"
+                android:spinnerMode="dropdown"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/active_notes_text"
+            android:text="Notes:"
+            android:layout_marginLeft="7dp"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/active_notes"
+            android:gravity="top|left"
+            android:background="@drawable/frame"
+            android:inputType="textNoSuggestions"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:textSize="12dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="60dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="9dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/Sleep"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="171dp"
+                android:layout_below="@+id/behaviorSpinner"
+                android:layout_alignLeft="@+id/behaviorSpinner"
+                android:textColor="#000000"
+                android:text="Sleep:"
+                android:textSize="28sp" />
+            <!--<Spinner-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:id="@+id/sleepSpinner"-->
+                <!--android:entries="@array/behavior_options"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_below="@+id/Sleep"-->
+                <!--android:layout_alignLeft="@+id/Sleep"-->
+                <!--android:layout_alignRight="@+id/Sleep"-->
+                <!--android:spinnerMode="dropdown"/>-->
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="10dp"
+                app:ms_dropdown_max_height="120dp"
+                app:ms_background_color="#80FFFFFF"
+                android:layout_below="@+id/Sleep"
+                android:id="@+id/sleepSpinner"
+                android:textSize="14dp"
+                android:layout_alignLeft="@+id/Sleep"
+                android:layout_alignRight="@+id/Sleep"
+                android:spinnerMode="dropdown"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sleep_notes_text"
+            android:layout_marginLeft="7dp"
+            android:text="Notes:"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/sleep_notes"
+            android:background="@drawable/frame"
+            android:layout_marginTop="7dp"
+            android:inputType="textNoSuggestions"
+            android:textSize="12dp"
+            android:gravity="top|left"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="60dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="9dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/seen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have you seen your cat?"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="16dp"/>
+            <CheckBox android:id="@+id/saw_cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/check_box"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="5dp"
+                android:onClick="onSeenCat" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="No"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="16dp"/>
+            <CheckBox android:id="@+id/no_cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:button="@drawable/check_box"
+                android:onClick="onNoCat"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="9dp">
+        <TextView
+            android:id="@+id/DateBehavior"
+            android:textColor="#FFF"
+            android:layout_below="@+id/SaveBehave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <Button
+        android:layout_marginTop="-30dp"
+        android:id="@+id/BehaviorSave"
+        android:text="Save"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:onClick="onSaveButtonClickBehave"
+        android:shadowRadius="5"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

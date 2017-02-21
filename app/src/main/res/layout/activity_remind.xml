@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/all_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+    android:orientation="vertical"
+    android:background="@drawable/gradient8"
+    >
+
+    <LinearLayout
+        android:id="@+id/first_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        >
+
+        <TextView
+            android:id="@+id/textR"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:text="Daily Reminder"
+            android:textSize="28sp"
+            />
+
+
+        <Switch
+            android:id="@+id/switch_def"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sec_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/select_time"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:layout_alignParentLeft="true"
+                android:paddingBottom="9dp"
+                android:paddingTop="9dp"
+                android:textSize="18sp"
+                android:text="Choose Time"/>
+
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_horizontal"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/buttonshape"
+                android:paddingBottom="8dp"
+                android:paddingTop="10dp"
+                android:textSize="18sp"
+                android:text="Choose time"/>
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_repeat_value"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:layout_toLeftOf="@id/arrow_one"-->
+                <!--android:textColor="#000"-->
+                <!--android:textSize="14sp"/>-->
+        </RelativeLayout>
+
+    <!--<TextView-->
+        <!--android:id="@+id/date_tv"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_marginLeft="90dp"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:textColor="#FFFFFF"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:paddingTop="8dp"-->
+        <!--android:textSize="18sp"-->
+        <!--android:text="Choose time"/>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/line_and_outline_grey"/>
+
+    <RelativeLayout
+        android:id="@+id/repeat_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/tv_repeat"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:layout_alignParentLeft="true"
+            android:paddingBottom="20dp"
+            android:paddingTop="0dp"
+            android:textSize="18sp"
+            android:text="Repeat"/>
+
+        <TextView
+            android:id="@+id/arrow_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/personal_item_arrow"/>
+
+        <TextView
+            android:id="@+id/tv_repeat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/arrow_one"
+            android:textColor="#000"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_and_outline_grey"/>
+
+
+    <Button
+        android:id="@+id/set_btn"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonshape"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFFFF"
+        android:text="Set Reminder"/>
+
+    </LinearLayout>
+
+</LinearLayout>

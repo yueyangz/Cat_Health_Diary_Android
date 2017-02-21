@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Core.TodayPage">
+    <item
+        android:id="@+id/action_menuT"
+        android:orderInCategory="100"
+        android:title="Menu"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_lastPageT"
+        android:orderInCategory="100"
+        android:title="Last Page"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_quitT"
+        android:orderInCategory="100"
+        android:title="Quit"
+        app:showAsAction="never"/>
+</menu>
